@@ -1,14 +1,16 @@
 # Pansharpened-SS
 
-This repository contains all the details and results of the subjective study of pan-sharpened images developed at Javeriana Cali University.  
+This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia.
 ## Evaluation dataset
 
-The dataset is composed of 432 images, where half are images in true color and the other half images in pseudocolor. From these images, ten are pristine multi-spectral images, and 420 are fused images using six different techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and awgn) are applied to five different scenes of the pristine Roma image from Digital Globe [1] with three intensity levels. In this way you have: 
+The dataset is composed of 432 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands.    
+
+From these images, ten are pristine multi-spectral images, and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [1] with three intensity levels. In  total, there are:
 
 * Five Scenes.
-* Two color representation.
+* Two color planes.
 * Six fusion techniques.
-* Two distortions (it only applies to the panchromatic image).
+* Two distortions that are only applied to the panchromatic image.
 * Three distortion levels.
 
 In order to prepare the subjects for the test, we generate two non-related test images (true color and pseudocolor).
@@ -25,24 +27,27 @@ Distorted images have three intensity levels as shown in the following table:
 
 ## Image Codification
  
-Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (PSN) or pseudocolor (PSP). What follows is an encoding, where each number indicates the process applied according to the position. Each number is four digits composed of the following SFDL, where:
+Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (PSN) or pseudocolor (PSP). What follows is an encoding, where each number indicates the process applied according to the position. Each number is four digits composed of the following SFDL code:
  
-S: Scena 
-F: Fusion 
+S: Scene 
+F: Fusion Technique
 D: Distortion 
 L: Level 
  
 The following tables are decodification maps for the image name code: 
 
-| Code    | Fusion  | Distortion|
+| Code    | Fusion Technique  | Distortion|
 | --------|---------|---------|
 | 0       | D/A     | D/A     |
 | 1       | BDSD    | Blur    |
 | 2       | PCA     | AWGN    |
-| 3       | IHS     | D/A     |
-| 4       | GS      | D/A     |
-| 5       | Wavelet | D/A     |
-| 6       | HPF     | D/A     | 
+| 3       | IHS     | D/E     |
+| 4       | GS      | D/E     |
+| 5       | Wavelet | D/E     |
+| 6       | HPF     | D/E     | 
+
+D/A: Does not apply
+D/E: Does not exist
 
 For example if an image have the following codification: I_PSN_3213. This refers to an image fused with PCA generated with scene three and with a blur distortion with intensity level three. 
 
