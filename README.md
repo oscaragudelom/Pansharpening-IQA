@@ -56,6 +56,8 @@ The session routines are developed in Matlab and the PsychToolbox [2]. The proce
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in Figure 14, then a subject will rate the image using a continuous sliding quality bar with labels "Bad", "Poor", "Fair", "Good", or "Excellent", as shown in Figure 15. In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [4].
 
+![Image to evaluate](ScoreImage.png | width=100)
+
 ## References
 1. Digital Globe https://www.digitalglobe.com/.
 2. The psychophysics toolbox by Brainard, David H and Vision, Spatial.
