@@ -54,10 +54,19 @@ For example if an image have the following codification: I_PSN_3213. This refers
 ## Study Procedure
 The session routines are developed in Matlab and the PsychToolbox [2]. The procedure follows the recommendations mentioned in [3], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 19" monitor to observe the images, and the screen resolution set to 1024x768 pixels, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
-The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in Figure 14, then a subject will rate the image using a continuous sliding quality bar with labels "Bad", "Poor", "Fair", "Good", or "Excellent", as shown in Figure 15. In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [4].
+The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
-![Image to evaluate](ScoreImage.png | width=100)
+![Image to evaluate](ScoreImage.png)
 
+Then a subject will rate the image using a continuous sliding quality bar with labels "Bad", "Poor", "Fair", "Good", or "Excellent", as shown below. 
+
+![Score Bar](ScoreBar.png)
+
+Finally the subject select the more relevant distortion doing a keyboard selection.
+
+![Relevant Distortion](ScoreType.png)
+
+In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [4].
 ## References
 1. Digital Globe https://www.digitalglobe.com/.
 2. The psychophysics toolbox by Brainard, David H and Vision, Spatial.
