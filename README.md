@@ -52,7 +52,7 @@ D/E: Does not exist
 For example if an image have the following codification: I_PSN_3213. This refers to an image fused with PCA generated with scene three and with a blur distortion with intensity level three. 
 
 ## Study Procedure
-The session routines are developed in Matlab and the PsychToolbox [2]. The procedure follows the recommendations mentioned in [3], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 19" monitor to observe the images, and the screen resolution set to 1024x768 pixels, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
+The session routines are developed in Matlab and the PsychToolbox [2]. The procedure follows the recommendations mentioned in [3], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
