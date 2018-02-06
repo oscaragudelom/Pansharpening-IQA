@@ -13,7 +13,7 @@ From these images, ten are pristine multi-spectral images, and 420 are fused ima
 * Two distortions that are only applied to the panchromatic image.
 * Three distortion levels.
 
-In order to prepare the subjects for the test, we generate two non-related test images (true color and pseudocolor).
+In order to prepare the subjects for the test, we developed an introduction manual icluded in the repository with the distortions presented in the study. We also implement a image study test with different distortions and color representation to acquaint the subject.
 
 ## Image Codification
  
@@ -56,10 +56,14 @@ The final part is a intensity level for distorted images as shown in the followi
 | 2       | 5       | 0.10    |
 | 3       | 7       | 0.15    |
 
+The following image shows the diferent distortions with diferent intensity levels.
+
+ ![Color Tag](Tag_Distortion.png)
+
 For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Level-2. This refers to an pseudocolor image of Coliseum scene fused by generalized laplacian pyramid with MTF-matched filter and multiplicative injection mode, distorted with additive white gausion noise using σ = 0.10.
 
 ## Study Procedure
-The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
+The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
