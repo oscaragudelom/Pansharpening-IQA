@@ -15,23 +15,19 @@ From these images, ten are pristine multi-spectral images, and 420 are fused ima
 
 In order to prepare the subjects for the test, we generate two non-related test images (true color and pseudocolor).
 
-## Image Distortion
-Distorted images have three intensity levels as shown in the following table:
-
-| Level   | Blur(σ) | AWGN(σ) |
-| --------|---------|---------|
-| 1       | 3       | 0.05    |
-| 2       | 5       | 0.10    |
-| 3       | 7       | 0.15    |
-
-
 ## Image Codification
  
-Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (TC) or pseudocolor (PC). What follows is a scene tag, as shown below.
+Each image in the dataset has a tagged name that specifies the applied process. The image tag have the following order representation:
+
+The first part of the tag indicates whether the representation of the image is true color (TC) or pseudocolor (PC), As shown below.
+
+ ![Color Tag](Tag_Color.png)
+
+The second part is a scene tag, as shown below.
 
  ![Scenes Tag](Tag_Scenes.png)
- 
-The following table shows the acronyms of the fusion techniques.
+
+The third part is a fusion technique tag. The following table shows the acronyms of the fusion techniques.
 
 | Acronym    | Fusion Technique                                                                                   |
 |------------|----------------------------------------------------------------------------------------------------|
@@ -42,10 +38,25 @@ The following table shows the acronyms of the fusion techniques.
 | IHS        | Fast Intensity-Hue-Saturation (GIHS) image fusion [5]                                              |
 | MTF-GLP-CBD| Generalized Laplacian Pyramid [2] with MTF-matched filter [6] and multiplicative injection mode [7]|
 | ATWT-M2    | A Trous Wavelet Transform with Mode 2 [8]                                                          |
-| HPF        | High-Pass Filtering with 5x5 box filter for 1:4 fusion [4]                                         | 
+| HPF        | High-Pass Filtering with 5x5 box filter for 1:4 fusion [4]                                         |
 
+The fourth part is a distortion tag. The following table shows the acronyms of the distortions.
 
-For example if an image have the following codification: I_PSN_3213. This refers to an image fused with PCA generated with scene three and with a blur distortion with intensity level three. 
+| Acronym| Distortion                   |
+|--------|------------------------------|
+| UD     | Undistorted                  |
+| Blr    | Blur                         |
+| AWGN   | Additive White Gaussian Noise|
+
+The final part is a intensity level for distorted images as shown in the following table.
+
+| Level   | Blur(σ) | AWGN(σ) |
+| --------|---------|---------|
+| 1       | 3       | 0.05    |
+| 2       | 5       | 0.10    |
+| 3       | 7       | 0.15    |
+
+For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Level-2. This refers to an pseudocolor image of Coliseum scene fused by generalized laplacian pyramid with MTF-matched filter and multiplicative injection mode, distorted with additive white gausion noise using σ = 0.10.
 
 ## Study Procedure
 The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
