@@ -20,39 +20,35 @@ Distorted images have three intensity levels as shown in the following table:
 
 | Level   | Blur(σ) | AWGN(σ) |
 | --------|---------|---------|
-| 1       | 1       | 0.00250  |
-| 2       | 2       | 0.01375  |
-| 3       | 3       | 0.02500  |
+| 1       | 3       | 0.05    |
+| 2       | 5       | 0.10    |
+| 3       | 7       | 0.15    |
 
 
 ## Image Codification
  
-Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (PSN) or pseudocolor (PSP). What follows is an encoding, where each number indicates the process applied according to the position. Each number is four digits composed of the following SFDL code:
- 
-S: Scene 
-F: Fusion Technique
-D: Distortion 
-L: Level 
- 
-The following tables are decodification maps for the image name code: 
+Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (TC) or pseudocolor (PC). What follows is a scene tag, as shown below.
 
-| Code    | Fusion Technique  | Distortion|
-| --------|---------|---------|
-| 0       | D/A     | D/A     |
-| 1       | BDSD    | Blur    |
-| 2       | PCA     | AWGN    |
-| 3       | IHS     | D/E     |
-| 4       | GS      | D/E     |
-| 5       | Wavelet | D/E     |
-| 6       | HPF     | D/E     | 
+ 
+ 
+The following table shows the acronyms of the fusion techniques.
 
-D/A: Does not apply
-D/E: Does not exist
+| Acronym    | Fusion Technique                                                                                   |
+|------------|----------------------------------------------------------------------------------------------------|
+| REF        | Not fused MS image                                                                                 |
+| EXP        | MS image interpolation, using polinomial kernel with 23 coefficients [2]                           |
+| BDSD       | Band-Dependent Spatial-Detail with local parameter estimator [3]                                   |
+| PCA        | Principal Component Analysis [4]                                                                   |
+| IHS        | Fast Intensity-Hue-Saturation (GIHS) image fusion [5]                                              |
+| MTF-GLP-CBD| Generalized Laplacian Pyramid [2] with MTF-matched filter [6] and multiplicative injection mode [7]|
+| ATWT-M2    | A Trous Wavelet Transform with Mode 2 [8]                                                          |
+| HPF        | High-Pass Filtering with 5x5 box filter for 1:4 fusion [4]                                         | 
+
 
 For example if an image have the following codification: I_PSN_3213. This refers to an image fused with PCA generated with scene three and with a blur distortion with intensity level three. 
 
 ## Study Procedure
-The session routines are developed in Matlab and the PsychToolbox [2]. The procedure follows the recommendations mentioned in [3], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
+The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, while the stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
@@ -66,10 +62,17 @@ Finally the subject select the more relevant distortion doing a keyboard selecti
 
 ![Relevant Distortion](ScoreType.png)
 
-In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [4].
+In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [11].
 ## References
 1. Digital Globe https://www.digitalglobe.com/.
-2. The psychophysics toolbox by Brainard, David H and Vision, Spatial.
-3. Study of subjective and objective quality assessment of video by Kalpana Seshadrinathan, Rajiv Soundararajan, Alan Conrad Bovik and Lawrence K Cormack.
-4. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
+2. Aiazzi, Bruno, et al. "Context-driven fusion of high spatial and spectral resolution images based on oversampled multiresolution analysis." IEEE Transactions on geoscience and remote sensing 40.10 (2002): 2300-2312.
+3. Garzelli, Andrea, Filippo Nencini, and Luca Capobianco. "Optimal MMSE pan sharpening of very high resolution multispectral images." IEEE Transactions on Geoscience and Remote Sensing 46.1 (2008): 228-236.
+4. Chavez, Pats, Stuart C. Sides, and Jeffrey A. Anderson. "Comparison of three different methods to merge multiresolution and multispectral data- Landsat TM and SPOT panchromatic." Photogrammetric Engineering and remote sensing 57.3 (1991): 295-303.
+5. Tu, Te-Ming, et al. "A new look at IHS-like image fusion methods." Information fusion 2.3 (2001): 177-186.
+6. Aiazzi, B., et al. "MTF-tailored multiscale fusion of high-resolution MS and Pan imagery." Photogrammetric Engineering & Remote Sensing 72.5 (2006): 591-596.
+7. Aiazzi, B., et al. "An MTF-based spectral distortion minimizing model for pan-sharpening of very high resolution multispectral images of urban areas." Remote Sensing and Data Fusion over Urban Areas, 2003. 2nd GRSS/ISPRS Joint Workshop on. IEEE, 2003.
+8. Ranchin, Thierry, and Lucien Wald. "Fusion of high spatial and spectral resolution images: the ARSIS concept and its implementation." Photogrammetric Engineering and Remote Sensing 66.1 (2000): 49-61.
+9. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
+10. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
+11. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
 
