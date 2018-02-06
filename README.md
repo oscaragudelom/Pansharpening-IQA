@@ -29,7 +29,7 @@ Distorted images have three intensity levels as shown in the following table:
  
 Each image in the dataset has a coded name that specifies the applied process. The first part of the code indicates whether the representation of the image is true color (TC) or pseudocolor (PC). What follows is a scene tag, as shown below.
 
- 
+ ![Scenes Tag](Tag_Scenes.png)
  
 The following table shows the acronyms of the fusion techniques.
 
