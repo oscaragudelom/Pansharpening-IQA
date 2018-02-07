@@ -3,17 +3,15 @@
 This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia.
 ## Evaluation dataset
 
-The dataset is composed of 432 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands.    
+The dataset is composed of 440 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands.    
 
-From these images, ten are pristine multi-spectral images, and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [1] with three intensity levels. In  total, there are:
+From these images, ten are pristine multi-spectral images, ten are interpolated multi-spectral images [2],  and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [1] with three intensity levels. In  total, there are:
 
 * Five Scenes.
 * Two color planes.
 * Six fusion techniques.
 * Two distortions that are only applied to the panchromatic image.
 * Three distortion levels.
-
-In order to prepare the subjects for the test, we developed an introduction manual icluded in the repository with the distortions presented in the study. We also implement a image study test with different distortions and color representation to acquaint the subject.
 
 ## Image Codification
  
@@ -56,7 +54,7 @@ The final part is a intensity level for distorted images as shown in the followi
 | 2       | 5       | 0.10    |
 | 3       | 7       | 0.15    |
 
-The following image shows the diferent distortions with diferent intensity levels.
+The following images show an true color image of Coliseum scene fused by band-dependent spatial-detail with local parameter estimator, distorted with diferent distortions and intensity levels.
 
  ![Color Tag](Tag_Distortion.png)
 
@@ -65,7 +63,7 @@ For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Lev
 ## Study Procedure
 The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
-The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 142 images will be evaluated  for a total of 432 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
+The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 147 images will be evaluated  for a total of 440 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
 ![Image to evaluate](ScoreImage.png)
 
@@ -78,6 +76,15 @@ Finally the subject select the more relevant distortion doing a keyboard selecti
 ![Relevant Distortion](ScoreType.png)
 
 In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [11].
+
+Before beginning the study, the subjects will be explained the different types of distortion present in the images as following: 
+
+* Artifacts: Noise and blockiness distortions not part ofthe video content.
+* Color: Videos with incorrect or insufficient color repre-sentation.
+* Sharpness: General unsharpness, i.e., lack of detail,texture, or sharpness. This distortion differs from out-of-focus distortion in that with sharpness distortion, objectsare in focus but do not appear ‘crisp’ or detailed.
+
+At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [12]. Test images will be displayed to acquaint the participants with the images and the interface. A total of six images with different color representation, distortions and intensity levels will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid suggesting the participants.  
+
 ## References
 1. Digital Globe https://www.digitalglobe.com/.
 2. Aiazzi, Bruno, et al. "Context-driven fusion of high spatial and spectral resolution images based on oversampled multiresolution analysis." IEEE Transactions on geoscience and remote sensing 40.10 (2002): 2300-2312.
@@ -90,4 +97,5 @@ In addition, we will calibrate and measure the display and room illumination and
 9. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
 10. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
 11. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
+12. Moorthy, Anush Krishna, et al. "Video quality assessment on mobile devices: Subjective, behavioral and objective studies." IEEE Journal of Selected Topics in Signal Processing 6.6 (2012): 652-671.
 
