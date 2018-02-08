@@ -91,6 +91,20 @@ Finally the subject select the more relevant distortion doing a keyboard selecti
 
 In addition, we will calibrate and measure the display using an Spyder5 PRO calibrator [13], and develop the study in a low-light room according to the display calibrator specifications.
 
+## Collected Data
+
+The information collected is accommodated in a .mat file for each subject where a 240x9 cell is located. The columns of the cell have the following order: 
+
+1. Image tag. 
+2. Score. 
+3. The most relevant distortion type. 
+4. Spend time to qualify the image. 
+5. Does the subject use some method of vision correction? 
+6. Subject Ishihara tested result. 
+7. Subject Snellen tested result. 
+8. Screen Gamma. 
+9. Screen White Point.   
+
 ## References
 1. Alparone, Luciano, et al. "Comparison of pansharpening algorithms: Outcome of the 2006 GRS-S data-fusion contest." IEEE Transactions on Geoscience and Remote Sensing 45.10 (2007): 3012-3021.
 2. Aiazzi, Bruno, et al. "Context-driven fusion of high spatial and spectral resolution images based on oversampled multiresolution analysis." IEEE Transactions on geoscience and remote sensing 40.10 (2002): 2300-2312.
