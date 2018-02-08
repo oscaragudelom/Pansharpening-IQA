@@ -3,9 +3,9 @@
 This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia.
 ## Evaluation dataset
 
-The dataset is composed of 440 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands.    
+The dataset is composed of 440 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands, according to [1].    
 
-From these images, ten are pristine multi-spectral images, ten are interpolated multi-spectral images [2],  and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [1] with three intensity levels. In  total, there are:
+From these images, ten are pristine multi-spectral images, ten are interpolated multi-spectral images [2],  and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [3] with three intensity levels. In  total, there are:
 
 * Five Scenes.
 * Two color planes.
@@ -31,12 +31,12 @@ The third part is a fusion technique tag. The following table shows the acronyms
 |------------|----------------------------------------------------------------------------------------------------|
 | REF        | Not fused MS image                                                                                 |
 | EXP        | MS image interpolation, using polinomial kernel with 23 coefficients [2]                           |
-| BDSD       | Band-Dependent Spatial-Detail with local parameter estimator [3]                                   |
-| PCA        | Principal Component Analysis [4]                                                                   |
-| IHS        | Fast Intensity-Hue-Saturation (GIHS) image fusion [5]                                              |
-| MTF-GLP-CBD| Generalized Laplacian Pyramid [2] with MTF-matched filter [6] and multiplicative injection mode [7]|
-| ATWT-M2    | A Trous Wavelet Transform with Mode 2 [8]                                                          |
-| HPF        | High-Pass Filtering with 5x5 box filter for 1:4 fusion [4]                                         |
+| BDSD       | Band-Dependent Spatial-Detail with local parameter estimator [4]                                   |
+| PCA        | Principal Component Analysis [5]                                                                   |
+| IHS        | Fast Intensity-Hue-Saturation (GIHS) image fusion [6]                                              |
+| MTF-GLP-CBD| Generalized Laplacian Pyramid [2] with MTF-matched filter [7] and multiplicative injection mode [8]|
+| ATWT-M2    | A Trous Wavelet Transform with Mode 2 [9]                                                          |
+| HPF        | High-Pass Filtering with 5x5 box filter for 1:4 fusion [5]                                         |
 
 The fourth part is a distortion tag. The following table shows the acronyms of the distortions.
 
@@ -75,7 +75,7 @@ Following images shows the diferent distortion types.
 
 At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [9]. Test images will be displayed to acquaint the participants with the images and the interface. A total of four images with different color representation and distortions will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid suggesting the participants.
 
-The session routines are developed in Matlab and the PsychToolbox [10]. The procedure follows the recommendations mentioned in [11], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a HP S1933 monitor (18.5")  and a Intel HD 4000 graphic card to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to black. 
+The session routines are developed in Matlab and the PsychToolbox [11]. The procedure follows the recommendations mentioned in [12], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a HP S1933 monitor (18.5")  and a Intel HD 4000 graphic card to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to black. 
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 147 images will be evaluated  for a total of 440 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
@@ -89,19 +89,20 @@ Finally the subject select the more relevant distortion doing a keyboard selecti
 
 ![Relevant Distortion](ScoreType.png)
 
-In addition, we will calibrate and measure the display using an Spyder5 PRO calibrator [12], and develop the study in a low-light room according to the display calibrator specifications.
+In addition, we will calibrate and measure the display using an Spyder5 PRO calibrator [13], and develop the study in a low-light room according to the display calibrator specifications.
 
 ## References
-1. Digital Globe https://www.digitalglobe.com/.
+1. Alparone, Luciano, et al. "Comparison of pansharpening algorithms: Outcome of the 2006 GRS-S data-fusion contest." IEEE Transactions on Geoscience and Remote Sensing 45.10 (2007): 3012-3021.
 2. Aiazzi, Bruno, et al. "Context-driven fusion of high spatial and spectral resolution images based on oversampled multiresolution analysis." IEEE Transactions on geoscience and remote sensing 40.10 (2002): 2300-2312.
-3. Garzelli, Andrea, Filippo Nencini, and Luca Capobianco. "Optimal MMSE pan sharpening of very high resolution multispectral images." IEEE Transactions on Geoscience and Remote Sensing 46.1 (2008): 228-236.
-4. Chavez, Pats, Stuart C. Sides, and Jeffrey A. Anderson. "Comparison of three different methods to merge multiresolution and multispectral data- Landsat TM and SPOT panchromatic." Photogrammetric Engineering and remote sensing 57.3 (1991): 295-303.
-5. Tu, Te-Ming, et al. "A new look at IHS-like image fusion methods." Information fusion 2.3 (2001): 177-186.
-6. Aiazzi, B., et al. "MTF-tailored multiscale fusion of high-resolution MS and Pan imagery." Photogrammetric Engineering & Remote Sensing 72.5 (2006): 591-596.
-7. Aiazzi, B., et al. "An MTF-based spectral distortion minimizing model for pan-sharpening of very high resolution multispectral images of urban areas." Remote Sensing and Data Fusion over Urban Areas, 2003. 2nd GRSS/ISPRS Joint Workshop on. IEEE, 2003.
-8. Ranchin, Thierry, and Lucien Wald. "Fusion of high spatial and spectral resolution images: the ARSIS concept and its implementation." Photogrammetric Engineering and Remote Sensing 66.1 (2000): 49-61.
-9. Moorthy, Anush Krishna, et al. "Video quality assessment on mobile devices: Subjective, behavioral and objective studies." IEEE Journal of Selected Topics in Signal Processing 6.6 (2012): 652-671.
-10. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
-11. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
-12. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
+3. Digital Globe https://www.digitalglobe.com/.
+4. Garzelli, Andrea, Filippo Nencini, and Luca Capobianco. "Optimal MMSE pan sharpening of very high resolution multispectral images." IEEE Transactions on Geoscience and Remote Sensing 46.1 (2008): 228-236.
+5. Chavez, Pats, Stuart C. Sides, and Jeffrey A. Anderson. "Comparison of three different methods to merge multiresolution and multispectral data- Landsat TM and SPOT panchromatic." Photogrammetric Engineering and remote sensing 57.3 (1991): 295-303.
+6. Tu, Te-Ming, et al. "A new look at IHS-like image fusion methods." Information fusion 2.3 (2001): 177-186.
+7. Aiazzi, B., et al. "MTF-tailored multiscale fusion of high-resolution MS and Pan imagery." Photogrammetric Engineering & Remote Sensing 72.5 (2006): 591-596.
+8. Aiazzi, B., et al. "An MTF-based spectral distortion minimizing model for pan-sharpening of very high resolution multispectral images of urban areas." Remote Sensing and Data Fusion over Urban Areas, 2003. 2nd GRSS/ISPRS Joint Workshop on. IEEE, 2003.
+9. Ranchin, Thierry, and Lucien Wald. "Fusion of high spatial and spectral resolution images: the ARSIS concept and its implementation." Photogrammetric Engineering and Remote Sensing 66.1 (2000): 49-61.
+10. Moorthy, Anush Krishna, et al. "Video quality assessment on mobile devices: Subjective, behavioral and objective studies." IEEE Journal of Selected Topics in Signal Processing 6.6 (2012): 652-671.
+11. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
+12. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
+13. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
 
