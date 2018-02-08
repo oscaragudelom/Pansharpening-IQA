@@ -61,7 +61,22 @@ The following images show an true color image of Coliseum scene fused by band-de
 For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Level-2. This refers to an pseudocolor image of Coliseum scene fused by generalized laplacian pyramid with MTF-matched filter and multiplicative injection mode, distorted with additive white gausion noise using σ = 0.10.
 
 ## Study Procedure
-The session routines are developed in Matlab and the PsychToolbox [9]. The procedure follows the recommendations mentioned in [10], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
+
+Before beginning the study, the subjects will be explained the different types of distortion present in the images as following: 
+
+* Artifacts: Noise and blockiness distortions not part ofthe video content.
+* Color: Videos with incorrect or insufficient color repre-sentation.
+* Sharpness: General unsharpness, i.e., lack of detail,texture, or sharpness. This distortion differs from out-of-focus distortion in that with sharpness distortion, objectsare in focus but do not appear ‘crisp’ or detailed.
+* Exposure: Over/under-exposure, making it difficult to seeparts or the entirety of the scene.
+
+Following images shows the diferent distortion types.
+
+![Relevant Distortion](Distortion_Types.png)
+
+At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [9]. Test images will be displayed to acquaint the participants with the images and the interface. A total of four images with different color representation and distortions will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid suggesting the participants.
+
+
+The session routines are developed in Matlab and the PsychToolbox [10]. The procedure follows the recommendations mentioned in [11], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a 18.5" monitor to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to mid gray. 
 
 The study will take place during three sessions of 25 minutes each with 40 voluntaries. In each session, 147 images will be evaluated  for a total of 440 images. The sequence will start displaying a single stimulus image for 7 seconds as depicted in the following image.
 
@@ -75,15 +90,7 @@ Finally the subject select the more relevant distortion doing a keyboard selecti
 
 ![Relevant Distortion](ScoreType.png)
 
-In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [11].
-
-Before beginning the study, the subjects will be explained the different types of distortion present in the images as following: 
-
-* Artifacts: Noise and blockiness distortions not part ofthe video content.
-* Color: Videos with incorrect or insufficient color repre-sentation.
-* Sharpness: General unsharpness, i.e., lack of detail,texture, or sharpness. This distortion differs from out-of-focus distortion in that with sharpness distortion, objectsare in focus but do not appear ‘crisp’ or detailed.
-
-At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [12]. Test images will be displayed to acquaint the participants with the images and the interface. A total of six images with different color representation, distortions and intensity levels will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid suggesting the participants.  
+In addition, we will calibrate and measure the display and room illumination and color levels during the tests using an Spyder5 PRO calibrator [12].
 
 ## References
 1. Digital Globe https://www.digitalglobe.com/.
@@ -94,8 +101,8 @@ At the start of the first session, the subjects are vision examined using Snelle
 6. Aiazzi, B., et al. "MTF-tailored multiscale fusion of high-resolution MS and Pan imagery." Photogrammetric Engineering & Remote Sensing 72.5 (2006): 591-596.
 7. Aiazzi, B., et al. "An MTF-based spectral distortion minimizing model for pan-sharpening of very high resolution multispectral images of urban areas." Remote Sensing and Data Fusion over Urban Areas, 2003. 2nd GRSS/ISPRS Joint Workshop on. IEEE, 2003.
 8. Ranchin, Thierry, and Lucien Wald. "Fusion of high spatial and spectral resolution images: the ARSIS concept and its implementation." Photogrammetric Engineering and Remote Sensing 66.1 (2000): 49-61.
-9. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
-10. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
-11. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
-12. Moorthy, Anush Krishna, et al. "Video quality assessment on mobile devices: Subjective, behavioral and objective studies." IEEE Journal of Selected Topics in Signal Processing 6.6 (2012): 652-671.
+9. Moorthy, Anush Krishna, et al. "Video quality assessment on mobile devices: Subjective, behavioral and objective studies." IEEE Journal of Selected Topics in Signal Processing 6.6 (2012): 652-671.
+10. Brainard, David H., and Spatial Vision. "The psychophysics toolbox." Spatial vision 10 (1997): 433-436.
+11. Seshadrinathan, Kalpana, et al. "Study of subjective and objective quality assessment of video." IEEE transactions on image processing 19.6 (2010): 1427-1441..
+12. Spyder5 PRO Datacolor http://www.datacolor.com/photography-design/product-overview/spyder5-family/#spyder5pro.
 
