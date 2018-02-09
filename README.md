@@ -5,7 +5,7 @@ This repository contains all the details and results of the subjective study of 
 
 The dataset is composed of 440 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands, according to [1].    
 
-From these images, ten are pristine multi-spectral images, ten are interpolated multi-spectral images [2],  and 420 are fused images using six different fusion techniques, three of multi-resolution analysis and three of principal component substitution. Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [3] with three intensity levels. In  total, there are:
+From these images, ten are pristine multi-spectral images, ten are interpolated multi-spectral images [2],  and 420 are fused images using six different fusion techniques, three of them belong to the multi-resolution (MR) category and three of them are based om principal component substitution (PC). Two distortions (blur and additive white gaussian noise (awgn)) are applied to five different scenes of the pristine Roma image from Digital Globe [3] with three intensity levels. In  total, there are:
 
 * Five Scenes.
 * Two color planes.
@@ -54,26 +54,26 @@ The final part is a intensity level for distorted images as shown in the followi
 | 2       | 5       | 0.10    |
 | 3       | 7       | 0.15    |
 
-The following images show an true color image of Coliseum scene fused by band-dependent spatial-detail with local parameter estimator, distorted with diferent distortions and intensity levels.
+The following images show an true color image of Coliseum scene fused by BDSD with local parameter estimator, distorted with diferent impairments and distortion levels.
 
  ![Color Tag](Tag_Distortion.png)
 
-For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Level-2. This refers to an pseudocolor image of Coliseum scene fused by generalized laplacian pyramid with MTF-matched filter and multiplicative injection mode, distorted with additive white gausion noise using σ = 0.10.
+For example if an image have the following tag: PC_Coliseum_MTF-GLP-CBD_AWGN_Level-2. This refers to a pseudocolor image of Coliseum scene fused by generalized laplacian pyramid with MTF-matched filter and multiplicative injection mode, distorted with additive white gausion noise using σ = 0.10.
 
 ## Study Procedure
 
 Before beginning the study, the subjects will be explained the different types of distortion present in the images as following: 
 
-* Artifacts: Noise and blockiness distortions not part ofthe video content.
+* Artifacts: Noise and blockiness distortions not part of the video content.
 * Color: Videos with incorrect or insufficient color repre-sentation.
-* Sharpness: General unsharpness, i.e., lack of detail,texture, or sharpness. This distortion differs from out-of-focus distortion in that with sharpness distortion, objectsare in focus but do not appear ‘crisp’ or detailed.
+* Sharpness: General unsharpness, i.e., lack of detail,texture, or sharpness. This distortion differs from out-of-focus distortion in that with sharpness distortion, objects are in focus but do not appear ‘crisp’ or detailed.
 * Exposure: Over/under-exposure, making it difficult to seeparts or the entirety of the scene.
 
 Following images shows the diferent distortion types.
 
 ![Relevant Distortion](Distortion_Types.png)
 
-At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [9]. Test images will be displayed to acquaint the participants with the images and the interface. A total of four images with different color representation and distortions will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid suggesting the participants.
+At the start of the first session, the subjects are vision examined using Snellen and Ishara tests. If someone doesn’t do well on the vision test, we still want them in our study [9]. Test images will be displayed to acquaint the participants with the images and the interface. A total of four images with different color representation and distortions will be presented to the subjects in the test procedure. These images are not related to the images of the study to avoid biasing the participants.
 
 The session routines are developed in Matlab and the PsychToolbox [11]. The procedure follows the recommendations mentioned in [12], where the subjects indicated the quality of the video on a continuous scale between [0, 100], in which each original image is included in the experiment but not identified as such. The test will be performed with a HP S1933 monitor (18.5")  and a Intel HD 4000 graphic card to observe the images, and the screen resolution set to 1366 x 768 @ 60 Hz, at a viewing distance that will be between 45cm and 55cm. The stimulus images will be displayed at their native resolution to prevent distortions due to scaling operations. Areas outside the images are set to black. 
 
@@ -85,7 +85,7 @@ Then a subject will rate the image using a continuous sliding quality bar with l
 
 ![Score Bar](ScoreBar.png)
 
-Finally the subject select the more relevant distortion doing a keyboard selection.
+Finally, the subject selects the most relevant distortion doing a keyboard selection.
 
 ![Relevant Distortion](ScoreType.png)
 
