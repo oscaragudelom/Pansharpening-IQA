@@ -28,7 +28,7 @@ The second part is a scene tag, as shown below.
 The third part is a fusion technique tag. The following table shows the acronyms of the fusion techniques.
 
 | Acronym    | Fusion Technique                                                                                   |
-|------------|----------------------------------------------------------------------------------------------------|
+|:-----------|:---------------------------------------------------------------------------------------------------|
 | REF        | Not fused MS image                                                                                 |
 | EXP        | MS image interpolation, using polinomial kernel with 23 coefficients [2]                           |
 | BDSD       | Band-Dependent Spatial-Detail with local parameter estimator [4]                                   |
@@ -41,7 +41,7 @@ The third part is a fusion technique tag. The following table shows the acronyms
 The fourth part is a distortion tag. The following table shows the acronyms of the distortions.
 
 | Acronym| Distortion                   |
-|--------|------------------------------|
+|:-------|:-----------------------------|
 | UD     | Undistorted                  |
 | Blr    | Blur                         |
 | AWGN   | Additive White Gaussian Noise|
@@ -49,7 +49,7 @@ The fourth part is a distortion tag. The following table shows the acronyms of t
 The final part is a intensity level for distorted images as shown in the following table.
 
 | Level   | Blur(σ) | AWGN(σ) |
-| --------|---------|---------|
+|:--------|:--------|:--------|
 | 1       | 3       | 0.05    |
 | 2       | 5       | 0.10    |
 | 3       | 7       | 0.15    |
