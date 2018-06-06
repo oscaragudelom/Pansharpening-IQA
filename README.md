@@ -1,4 +1,4 @@
-# Pansharpening Image Quality Analizer
+# Pansharpening Image Quality Analyzer
 
 This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia and some proposed IQA for these images.
 
