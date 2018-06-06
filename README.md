@@ -1,6 +1,7 @@
-# Pansharpened-SS
+# Pansharpening Image Quality Analizer
 
-This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia.
+This repository contains all the details and results of the subjective study of pan-sharpened images developed at Pontificia Universidad Javeriana Cali, Colombia and some proposed IQA for these images.
+
 ## Evaluation dataset
 
 The dataset is composed of 440 images, where half are images in true color and the other half images in pseudocolor. True color images are composed of the red (R), green (G) and blue (B) bands, that constitute the visible spectrum. The pseudocolor images are composed of near infrared (NIR), R, G bands, according to [1].    
